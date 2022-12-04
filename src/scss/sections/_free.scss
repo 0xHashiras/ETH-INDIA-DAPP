@@ -1,0 +1,174 @@
+.free {
+  position: relative;
+  margin: 5rem 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 25rem;
+    border-radius: 1rem;
+    background-color: var(--orange);
+    overflow: hidden;
+    z-index: 1;
+
+    .background {
+      z-index: -1;
+      .ellipse {
+        position: absolute;
+        height: 100%;
+        width: 28rem;
+        border-radius: 100%;
+        filter: blur(100px);
+      }
+
+      .pink {
+        background-color: var(--pink);
+        top: -10%;
+        left: -15%;
+      }
+
+      .green {
+        background-color: var(--green);
+        top: -10%;
+        right: -15%;
+      }
+    }
+
+    .content {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 5rem;
+      gap: 1.5rem;
+      .title {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    position: absolute;
+    top: -2rem;
+    right: 40%;
+
+    .card1 {
+      position: absolute;
+      top: 0;
+      z-index: 3;
+      transform: rotate(-10deg);
+      font-size: 0.6rem;
+    }
+
+    .card2 {
+      position: absolute;
+      top: 0;
+      left: 10rem;
+      z-index: 2;
+      transform: rotate(5deg);
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .free {
+    position: relative;
+    margin: 0;
+    margin-top: 5rem;
+
+    .container {
+      margin: 1rem;
+      height: 15rem;
+      border-radius: 5px;
+      background-color: var(--green);
+
+      .background {
+        z-index: -1;
+        .ellipse {
+          position: absolute;
+          height: 100%;
+          width: 28rem;
+          border-radius: 100%;
+        }
+
+        .pink {
+          display: none;
+        }
+
+        .green {
+          display: none;
+        }
+      }
+
+      .content {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        font-size: 1rem;
+        .title {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      position: absolute;
+      top: -3rem;
+      right: 60%;
+
+      .card1 {
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        transform: rotate(-10deg);
+        font-size: 10px;
+      }
+
+      .card2 {
+        position: absolute;
+        top: 0;
+        left: 5rem;
+        z-index: 2;
+        transform: rotate(5deg);
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .free {
+    margin: 2rem;
+    margin-top: 3rem;
+
+    .container {
+      height: 15rem;
+      .content {
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1rem;
+        .title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .cards {
+      top: -10rem;
+      right: 50%;
+
+      .card1 {
+        transform: rotate(-8deg);
+      }
+
+      .card2 {
+        transform: rotate(8deg);
+      }
+    }
+  }
+}

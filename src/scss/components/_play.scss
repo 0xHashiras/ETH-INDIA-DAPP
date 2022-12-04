@@ -1,0 +1,47 @@
+.grass {
+    background: 'transparent';
+}
+
+.play {
+  padding-top: 2rem;
+    .sub-title{
+        color: white;
+    }
+    span {
+      color: white;
+    }
+    .details {
+      display: flex;
+      span {
+        padding-left: 1rem;
+      }
+    }
+
+    button {
+        font-size: 14px;
+        color: var(--accent-color1);
+        background-color: var(--background);
+        padding: 1rem 3rem;
+        font-weight: bold;
+        border-radius: 2rem;
+        border: solid 3px transparent;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+          ),
+          linear-gradient(101deg, var(--pink), var(--orange));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px var(--background) inset;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+      .title {
+        color: var(--pink);
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }    
+}
