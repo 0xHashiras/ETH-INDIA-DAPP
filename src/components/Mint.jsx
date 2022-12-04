@@ -46,6 +46,7 @@ function Mint() {
       try {
         setIsLoading(true);
         console.log("before mint", accounts)
+        await getBalance();
         await contract.methods.safeMint(accounts).send({from: accounts});
         let totalSupply = await contract.methods.totalSupply().call()
         console.log("total ", Number(totalSupply) + 1);
@@ -61,6 +62,7 @@ function Mint() {
     }
 
     const getBalance = async () => {
+      console.log("balancings");
       let balance = await contract.methods.balanceOf(accounts).call();
           console.log("balance", balance)
           setBalance(balance)
@@ -68,7 +70,9 @@ function Mint() {
 
     useEffect(() =>{
       (async ()=> {
+        console.log("iou")
         if(contract) {
+          console.log( contract)
           getBalance()
          }
       })()

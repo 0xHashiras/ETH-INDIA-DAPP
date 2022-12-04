@@ -30,7 +30,7 @@ export const supportedNetworks = {
         name: 'Mumbai',
         tokenSymbol: 'MATIC',
         rpcURL: 'https://rpc-mumbai.maticvigil.com',
-        contract: '0x0c1197cB73D873E22d5f98c0e87708c8CB49D87d'
+        contract: '0xB1930D2730302D6988E9a0C7f25d6ba29A13a374'
     }
 }
 
